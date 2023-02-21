@@ -13,6 +13,7 @@ public class Main {
         System.out.println(baseballCoach.getDailyWorkout());
         System.out.println(mySillyCoach.getDailyFortune());
 
+        System.out.println(baseballCoach.getDailyFortune());
         context.close();
     }
 }
