@@ -7,10 +7,11 @@ public class Main {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
         Coach baseballCoach = context.getBean("baseballCoach", Coach.class);
-        Coach mySillyCoach = context.getBean("thatSillyCoach", Coach.class);
+        Coach mySillyCoach = context.getBean("tennisCoach", Coach.class);
 
         System.out.println(mySillyCoach.getDailyWorkout());
         System.out.println(baseballCoach.getDailyWorkout());
+        System.out.println(mySillyCoach.getDailyFortune());
 
         context.close();
     }
