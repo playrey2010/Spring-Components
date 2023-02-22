@@ -9,7 +9,6 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 @Component
-@Scope("prototype")
 public class TennisCoach implements Coach {
 
     @Autowired
@@ -20,18 +19,24 @@ public class TennisCoach implements Coach {
         System.out.println("Inside default constructor");
     }
 
-    // For PostConstruct and PreDestroy annotations, void return type is preferred as any returned value is not retrievable
-    // Must be no-arg methods
+    /*
+    Define my init method here
+    For PostConstruct and PreDestroy annotations, void return type is preferred as any returned value is not retrievable
+    Must be no-arg methods
+    */
 
     @PostConstruct
     public void doMyStartupStuff() {
-
+        System.out.println(">> TennisCoach: inside doMyStartupStuff()");
     }
-    // For PostConstruct and PreDestroy annotations, void return type is preferred as any returned value is not retrievable
-    // Must be no-arg methods
+    /*
+    Define my destroy method here
+    For PostConstruct and PreDestroy annotations, void return type is preferred as any returned value is not retrievable
+    Must be no-arg methods
+    */
     @PreDestroy
     public void doMyCleanupStuff() {
-
+        System.out.println(">> TennisCoach: inside doMyCleanupStuff()");
     }
 //    // Setter injection
 //    @Autowired
