@@ -26,6 +26,6 @@ public class BaseballCoach implements Coach {
 
     @Override
     public String getDailyFortune() {
-        return "Baseball Coach said " + fortuneService.getFortune();
+        return "Baseball Coach said: \"" + fortuneService.getFortune() + ".\"";
     }
 }
